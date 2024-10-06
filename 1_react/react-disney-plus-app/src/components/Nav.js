@@ -83,25 +83,7 @@ const Nav = () => {
         />
       </Logo>
 
-      {pathname === "/" ?
-        (<Login onClick={handleAuth}>Login</Login>) :
-        <>
-          <Input
-            value={searchValue}
-            onChange={handleChange}
-            className='nav__input'
-            type="text"
-            placeholder='검색해주세요.'
-          />
-
-          <SignOut>
-            <UserImg src={userData.photoURL} alt={userData.displayName} />
-            <DropDown>
-              <span onClick={handleSignOut}>Sign Out</span>
-            </DropDown>
-          </SignOut>
-        </>
-      }
+    
     </NavWrapper>
   )
 }
